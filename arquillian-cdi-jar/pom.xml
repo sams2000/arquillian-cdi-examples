@@ -26,8 +26,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-				  <source>${maven.compiler.source}</source>
-				  <target>${maven.compiler.target}</target>
+				<source>${maven.compiler.source}</source>
+				<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -64,14 +64,14 @@
 		<profile>
 			<id>tomee-embedded</id>
 			<activation>
-			  <activeByDefault>true</activeByDefault>
+			<activeByDefault>true</activeByDefault>
 			</activation>
 			<dependencies>
-			  <dependency>
+			<dependency>
 				<groupId>org.apache.openejb</groupId>
 				<artifactId>arquillian-tomee-embedded</artifactId>
 				<version>1.7.1</version>
-			  </dependency>
+			</dependency>
 			</dependencies>
 		</profile>
 
@@ -125,7 +125,7 @@
 		<profile>
 			<!-- This profile doesn't work as it's hanging on there with message on console
 				INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final "Brontes" starting
-			  -->
+			-->
 			<id>arquillian-jbossas-managed</id>
 			<dependencies>
 				<dependency>
