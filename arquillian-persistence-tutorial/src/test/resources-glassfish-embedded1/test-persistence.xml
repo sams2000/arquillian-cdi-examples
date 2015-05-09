@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://java.sun.com/xml/ns/persistence
+		http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<!-- Solution 1: bundle with glassfish-resources.xml, the detail jta-data-source is defined in glassfish-resources.xml. e.g jdbc/arquillian-->
+	<persistence-unit name="test">
+		<!-- following jndi-name can be replaced by including the database connection information directly  -->
+		<jta-data-source>jdbc/arquillian</jta-data-source>
+		<properties>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.logging.level.sql" value="FINE" />
+			<property name="eclipselink.logging.parameters" value="true" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
